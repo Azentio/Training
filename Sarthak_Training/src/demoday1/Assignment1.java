@@ -32,7 +32,7 @@ public class Assignment1 {
 		System.out.println("Print a grade based on mark obtained");
 		System.out.println("------------------");
 		
-		int m = 49;
+		int m = 100;
 		
 		if (m == 100) {
 			System.out.println("Result : OUSTANDING");
@@ -80,7 +80,7 @@ public class Assignment1 {
 		for (int i=0;i<3;i++) {
 		for (int j=0;j<3;j++){  
 			e[i][j] = q[i][j] + w[i][j]; 
-			System.out.println(e[i][j]+" ");
+			System.out.print(e[i][j]+" ");
 		}
 		System.out.println();
 		}
