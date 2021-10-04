@@ -34,7 +34,7 @@ WebDriver driver;
 		 loginPage.loginButton().click();
 		 Thread.sleep(5000);
 		 //Assert.assertTrue(loginPage.EditYourAccountInfo().isDisplayed());
-		 System.out.println(loginPage.EditYourAccountInfo().isDisplayed());
+		// System.out.println(loginPage.EditYourAccountInfo().isDisplayed());
 	
 }
 	@AfterMethod
