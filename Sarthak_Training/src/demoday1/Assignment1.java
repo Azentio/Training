@@ -22,7 +22,7 @@ public class Assignment1 {
 		int n = 9;
 		
 		for(int i=0;i<11;i++) {
-			System.out.println(n + " * " + i + " = " +n*i );
+			System.out.println(i + " x " + n + " = " +n*i );
 		}
 		
 		
@@ -105,9 +105,26 @@ public class Assignment1 {
 		System.out.println("==================");
 		
 		
-		int[] arr1 = {1,2,3,4,5,6,7,8};
+//		int[] arr1 = {1,2,3,4,5,6,7,8};
 		
-		
+		int []a =new int[]{1,2,3,4,5,6,7,8}; 
+        int min=a[0], max=a[0]; 
+      
+        for (int i = 0; i< a.length; i++)
+        { 
+           
+           if(a[i]<min) 
+               min=a[i]; 
+        } 
+        System.out.println("Minimun number: " + min); 
+      
+        for (int i = 0; i < a.length; i++)
+        { 
+           
+           if(a[i]>max) 
+               max=a[i]; 
+        } 
+        System.out.println("Max Number: " + max);
 }
 }
 
