@@ -82,8 +82,8 @@ public class Assignment1 {
 			e[i][j] = q[i][j] + w[i][j]; 
 			System.out.println(e[i][j]+" ");
 		}
-//		System.out.println();
-		
+		System.out.println();
+		}
 		
 		
 		System.out.println("==================");
@@ -99,7 +99,14 @@ public class Assignment1 {
 //		for (int i1 = 0;i1<arr.length;i1++) {
 //			System.out.println(arr[i1]);
 //		}
-	}
+	
+		System.out.println("==================");
+		System.out.println("Array of 8 elements and print min and max element");
+		System.out.println("==================");
+		
+		
+		int[] arr1 = {1,2,3,4,5,6,7,8};
+		
 		
 }
 }
