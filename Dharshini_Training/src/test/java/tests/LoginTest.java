@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -16,11 +17,15 @@ public class LoginTest extends BaseClass {
 WebDriver driver;
 
 
-
-	@Test(dataProvider="getlogindata")
-	public void login(String email,String password,String expectedstatus) throws IOException,InterruptedException  {
-		   driver= initializeDriver();
+@BeforeMethod
+public void OpenApplication() throws IOException {
+	   driver= initializeDriver();
 		 driver.get(prop.getProperty("url"));
+		 
+}
+	@Test(dataProvider="getlogindata")
+	public void login(String email,String password,String expectedResult) throws IOException,InterruptedException  {
+	
 		 
 		 
 		 LandingPage landingPage= new LandingPage(driver);
@@ -34,7 +39,18 @@ WebDriver driver;
 		 loginPage.loginButton().click();
 		 Thread.sleep(5000);
 		 //Assert.assertTrue(loginPage.EditYourAccountInfo().isDisplayed());
-		// System.out.println(loginPage.EditYourAccountInfo().isDisplayed());
+		
+		 //System.out.println(loginPage.EditYourAccountInfo().isDisplayed());
+		 String actualResult;
+		 try {
+			 loginPage.EditYourAccountInfo().isDisplayed();
+			 actualResult="Successful"; 	
+		 }
+		  	catch(Exception e)
+		 {
+		  		actualResult="Failure";
+		 }
+		 Assert.assertEquals(actualResult, expectedResult);
 	
 }
 	@AfterMethod
@@ -45,7 +61,7 @@ WebDriver driver;
 
 @DataProvider
 public Object[][] getlogindata() {
-	Object[][] data= {{"dharshiniselvaraj23@gmail.com","Selvaraj23!","successful"},{"dummy@gmail.com","ffhdfd","failure"}}; 
+	Object[][] data= {{"dharshiniselvaraj23@gmail.com","Selvaraj23!","Successful"},{"dummy@gmail.com","ffhdfd","Failure"}}; 
 	return data;
 	
 }
