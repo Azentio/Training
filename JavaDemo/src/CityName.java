@@ -3,11 +3,11 @@ public class CityName {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	     String[] Intarr = {"Bhilai","Salem","Raipur","Mahasamubd","Nagpur","Durg","CG"};
+	     String[] City = {"Bhilai","Salem","Raipur","Mahasamubd","Nagpur"};
 	     
-	        for (String ArrItem : Intarr) {
+	        for (String ArrItem : City) {
 	 
-	            System.out.println("Array Element Value: " + ArrItem);
+	            System.out.println("City Name: " + ArrItem);
 	 
 	        }  
 	 
