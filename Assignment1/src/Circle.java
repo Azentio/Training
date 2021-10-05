@@ -1,11 +1,14 @@
 
 public class Circle {
-    static double pi=3.14; 
+    // constant value
+	final double pi=3.14; 
 	public float radius;
+	//set method for set the radius value
 	public void setRadius(float rds)
 	{
 	radius=rds;	
 	}
+	//get method for set the radius value
 	public float getRadius()
 	{
 		System.out.println("The radius of the circle is :" + radius);
@@ -14,14 +17,14 @@ public class Circle {
 	public double getArea()
 	{
 		double area = pi*radius*radius;
-		System.out.println("Area of the circle is"+area);
+		System.out.println("Area of the circle is :"+area);
 		return area;
 		
 	}
 	public double getCircumference()
 	{
 		double circumference=2*pi*radius;
-		System.out.println("circumference of the circle is :"+ circumference);
+		System.out.println("circumference of the circle is :"+circumference);
 		return circumference;
 	}
 	public static void main(String[] args) {

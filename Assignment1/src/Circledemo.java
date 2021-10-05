@@ -15,8 +15,6 @@ public class Circledemo {
 	public static void main(String[] args) {
 		Circledemo cd=new Circledemo(5);
 		cd.getArea();
-
-
 	}
 
 }

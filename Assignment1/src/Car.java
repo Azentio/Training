@@ -1,4 +1,3 @@
-
 class Vehicle {
 	String purpose = "domestic";
 	int tyres = 4;
