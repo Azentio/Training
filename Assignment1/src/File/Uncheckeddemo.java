@@ -3,7 +3,7 @@ import java.io.*;
 
 public class Uncheckeddemo {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args)  {
 File f=new File("C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\bin\\File");
 FileReader fr=new FileReader(f);
 BufferedReader br=new BufferedReader(fr);
