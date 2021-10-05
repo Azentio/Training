@@ -2,24 +2,18 @@ package pack;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-	public class Circle {
+	public class Circle 
+	{
 		
 		double radius;
-
-		
 		public static void main(String[] args) 
 		
 		{
-			
 			Circle c=new Circle();
-			
 			c.setRadius();
 			c.getRadius();
 			c.getArea();
 			c.getCircumference();
-			
-		
-
 		}
 
 		public void setRadius()
