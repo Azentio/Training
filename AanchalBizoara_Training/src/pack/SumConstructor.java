@@ -7,12 +7,12 @@ public class SumConstructor
 	
 	public SumConstructor(int s)
 	{
-
+		this.sum=s;
 	}
 	
 	public SumConstructor()
 	{
-	this.sum=sum;
+	
 	}
 	
 	
