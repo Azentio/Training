@@ -38,7 +38,7 @@ public class MinMax
 				max=a[i];
 			}
 		}
-		System.out.println(max+ "min value");
+		System.out.println(max+ " min value");
 
 
 	}

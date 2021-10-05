@@ -12,7 +12,7 @@ public class Absolute
 	public static void main(String[] args) 
 	{
 		Absolute obj = new Absolute ();
-		xyz(82);
+		xyz(-82);
 
 	}
 
