@@ -1,5 +1,6 @@
 package demo;
 
+
 public class grade {
 
 	public static void main(String[] args) {
@@ -26,7 +27,7 @@ public class grade {
 		}
 		
 		else if(grade <= 50) {
-			System.out.println("Fail");
+			//System.out.println("Fail");
 		}
 
 	}
