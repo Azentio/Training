@@ -33,9 +33,13 @@ public class Circle
 		public static void main(String[] args) 
 		{
 			Circle c= new Circle ();
-			 c.setRadius(1.3);
-			 System.out.println(c.getArea());
-			  System.out.println(c.getCircumference());
+				c.setRadius(1.5);
+			System.out.println("Radius of circle = " +c.getRadius());
+			 
+			System.out.println("Area of Circle = " +c.getArea());
+			
+			System.out.println("Circumference of Circle = " +c.getCircumference());
+	
 
 		}
 }
