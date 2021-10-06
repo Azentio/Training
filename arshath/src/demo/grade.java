@@ -27,7 +27,7 @@ public class grade {
 		}
 		
 		else if(grade <= 50) {
-			//System.out.println("Fail");
+			System.out.println("Fail");
 		}
 
 	}
