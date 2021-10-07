@@ -5,7 +5,7 @@ package Assignment_Day2;
 public class Circle 
 {
 	 private double  radius;
-	  private final double pi = 3.14159;
+	  
 	  
 	  public void setRadius(double r)
 	  {
@@ -18,13 +18,13 @@ public class Circle
 	  }
 	  
 	  public double getArea() {
-		  double rd1=pi * radius * radius;
+		  double rd1=3.14 * radius * radius;
 		  return rd1;
 		  }
 	  
 	  public double getCircumference()
 	  {
-		  double rd2= 2*pi*radius;
+		  double rd2= 2*3.14*radius;
 		  return rd2;
 	  }
 
