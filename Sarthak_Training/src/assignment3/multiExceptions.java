@@ -1,22 +1,30 @@
 package assignment3;
 
-public class multiExceptions {
+import java.util.Scanner;
 
+public class multiExceptions 
+{
+	public void divi() 
+	{
+		int n;
+		System.out.println("Please enter a number to be divided");
+		Scanner scan = new Scanner(System.in);
+		n = scan.nextInt();
+		n = n / 0;
+	}
+{
+	try 
+	{
+		divi();
+	}
+	catch(ArithmeticException e) 
+	{
+		System.out.println("Cannot divide by zero");
+	}
+}
 	public static void main(String[] args) 
 	{
-		try 
-		{
-			int num[] = new int[10];
-			num[15] = 100 / 0;
-		}
-		catch(ArithmeticException  e) 
-		{
-			System.out.println("Zero cannot divide any number");
-		}
-		catch(ArrayIndexOutOfBoundsException   e) 
-		{
-			System.out.println("Index out of size of the array");
-		}
-	}
+		multiExceptions mul = new multiExceptions();
 
+	}
 }
