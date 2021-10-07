@@ -19,11 +19,16 @@ public class TrialSel {
 		String title = driver.getTitle();
 		System.out.println(title+": is the title of the page");
 		
+		
+		
 		driver.findElement(By.id("textbox1")).clear();
 		driver.findElement(By.id("textbox1")).sendKeys("Automation with SELENIUM");
 		
 		String attr = driver.findElement(By.id("rotb")).getAttribute("value");
-		System.out.println("this is the text: "+attr);
+		System.out.println("this is the text1: "+attr);
+		
+		String attri = driver.findElement(By.id("pah")).getText();
+		System.out.println("this is the text2: "+attri);
 		
 		boolean display = driver.findElement(By.id("but2")).isDisplayed();
 		System.out.println(display);
