@@ -1,7 +1,6 @@
 package assignment_third;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 
 public class Checked_Excep 
 {
@@ -12,9 +11,9 @@ public class Checked_Excep
 		{
 			 FileInputStream f = new FileInputStream("\\Users\\Priyanka.pradhan\\Desktop");
 	    }
-	  catch(FileNotFoundException e)
+	catch(FileNotFoundException e)
 		{
-		    System.out.println("Does not exist");
+		    System.out.println("File does not exist");
 	    }
 	}
 
