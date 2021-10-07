@@ -4,14 +4,44 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class SeleniumTest {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\chromedriver.exe" );
-		WebDriver d=new ChromeDriver();
-		d.get("http://omayo.blogspot.com/");
+		String browser="edge";
+		WebDriver d=null;
+		
+		if(browser.equalsIgnoreCase("chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\chromedriver.exe");
+			d=new ChromeDriver();
+			//Thread.sleep(3000);
+		
+		}
+		
+		else if(browser.equalsIgnoreCase("firefox"))
+		{
+		System.setProperty("webdriver.gecko.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\geckodriver.exe");
+		d=new FirefoxDriver();  
 		//Thread.sleep(3000);
+		}
+		else if(browser.equalsIgnoreCase("ie"))
+		{
+		System.setProperty("webdriver.ie.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\IEDriverServer.exe");
+		d=new InternetExplorerDriver();  
+		//Thread.sleep(3000);
+		}
+		else if(browser.equalsIgnoreCase("edge"))
+		{
+		System.setProperty("webdriver.edge.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\msedgedriver.exe");
+		d=new EdgeDriver();  
+		//Thread.sleep(3000);
+		}
+		
+		d.get("http://omayo.blogspot.com/");
 		d.manage().window().maximize();
 		Thread.sleep(2000);
 		String t=d.getTitle();
@@ -19,6 +49,9 @@ public class SeleniumTest {
 		String url=d.getCurrentUrl();
 		System.out.println("Web site's curet URL is :"+url);
 		//d.navigate().to("https://www.selenium.dev/");
+		//d.navigate().back();
+		//d.navigate().refresh();
+	/*	
 		List<WebElement> e=d.findElements(By.tagName("a"));
 		
 		
@@ -27,6 +60,8 @@ public class SeleniumTest {
 			if((j.getText().length())>0)
 			System.out.println(j.getText());
 		}
+		
+		d.findElement(By.linkText("Open a popup window")).click();
 		/*
 		 //normal for loop
 		 for(int i=0;i<e.size();i++)
