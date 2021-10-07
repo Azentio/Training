@@ -42,9 +42,6 @@ public class TrialSel {
 		driver.navigate().back();
 		driver.navigate().forward();
 		driver.navigate().refresh();
-		
-		
 		driver.close();
 	}
-
 }

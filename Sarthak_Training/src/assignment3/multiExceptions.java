@@ -7,7 +7,7 @@ public class multiExceptions
 	public void divi() 
 	{
 		int z;
-		System.out.println("Please enter a number to be divided");
+		System.out.print("Please enter a number to be divided:");
 		Scanner scan = new Scanner(System.in);
 		z = scan.nextInt();
 		z = z / 0;
@@ -19,7 +19,7 @@ public class multiExceptions
 	}
 	catch(ArithmeticException p) 
 	{
-		System.out.println("Cannot divide by zero");
+		System.out.println("Catch statment: 'Cannot divide by zero'3");
 	}
 }
 	public static void main(String[] args) 
