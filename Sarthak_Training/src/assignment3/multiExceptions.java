@@ -6,18 +6,18 @@ public class multiExceptions
 {
 	public void divi() 
 	{
-		int n;
+		int z;
 		System.out.println("Please enter a number to be divided");
 		Scanner scan = new Scanner(System.in);
-		n = scan.nextInt();
-		n = n / 0;
+		z = scan.nextInt();
+		z = z / 0;
 	}
 {
 	try 
 	{
 		divi();
 	}
-	catch(ArithmeticException e) 
+	catch(ArithmeticException p) 
 	{
 		System.out.println("Cannot divide by zero");
 	}
@@ -25,6 +25,7 @@ public class multiExceptions
 	public static void main(String[] args) 
 	{
 		multiExceptions mul = new multiExceptions();
+		
 
 	}
 }
