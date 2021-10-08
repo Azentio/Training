@@ -1,3 +1,4 @@
+package SeleniumTestTraining;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -11,7 +12,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 public class SeleniumTest {
 
 	public static void main(String[] args) throws InterruptedException {
-		String browser="edge";
+		String browser="chrome";
 		WebDriver d=null;
 		
 		if(browser.equalsIgnoreCase("chrome"))
@@ -19,7 +20,6 @@ public class SeleniumTest {
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\anandh.3508\\git\\repository6\\Assignment1\\driver\\chromedriver.exe");
 			d=new ChromeDriver();
 			//Thread.sleep(3000);
-		
 		}
 		
 		else if(browser.equalsIgnoreCase("firefox"))
@@ -40,10 +40,9 @@ public class SeleniumTest {
 		d=new EdgeDriver();  
 		//Thread.sleep(3000);
 		}
-		
 		d.get("http://omayo.blogspot.com/");
 		d.manage().window().maximize();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		String t=d.getTitle();
 		System.out.println("Web site's title is : "+t);
 		String url=d.getCurrentUrl();
