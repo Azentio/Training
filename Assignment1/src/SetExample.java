@@ -5,21 +5,39 @@ import java.util.Set;
 public class SetExample {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		HashSet<String> set = new HashSet<String>();
+		Set<String> set=new HashSet<String>();
+		
+		Object a[]=new Object[10];
 		set.add("Anandh");
-		set.add("Dhoni");
 		set.add("Virat");
-		Iterator<String> i=set.iterator();
-		if(i.hasNext())
+		set.add("Dhoni");
+		set.add("Rohit");
+		set.add("ABD");
+		Iterator itr=set.iterator();
+		String value;
+		while(itr.hasNext())
 		{
-			String name=i.next();
-			System.out.println(name);
+		//value=(String) itr.next();
+		String s=(String) itr.next();
+		
+		if(s=="Dhoni")
+		{
+			
+			System.out.println(s+" is Captain cool");
 		}
-		
-		
-		
-
+		//System.out.println(value);
+		}
+		a=set.toArray();
+		System.out.println("After converting to array :");
+		for(int j=0;j<a.length;j++)
+		{
+		System.out.println(a[j]);
+		}
+		System.out.println("Size of the set is:"+set.size());	
+		//System.out.println(set);
 	}
-
+	
 }
+
+
+
