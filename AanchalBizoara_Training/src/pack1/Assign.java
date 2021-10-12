@@ -1,4 +1,4 @@
-package selinium;
+package pack1;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -27,7 +27,8 @@ public class Assign
 		String attribute = driver.findElement(By.id("rotb")).getAttribute("value");
 		System.out.println("Text: "+attribute);
 	
-		Dimension d = driver.findElement(By.id("but2")).getSize();		System.out.println("Height: "+d.height);
+		Dimension d = driver.findElement(By.id("but2")).getSize();
+		System.out.println("Height: "+d.height);
 		System.out.println("Width: "+d.width);
 		
 		
@@ -44,5 +45,6 @@ public class Assign
 		driver.close();
 		}
 	
+
 
 }
