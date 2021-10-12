@@ -7,7 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class WH {
 
 	public static void main(String[] args) throws InterruptedException
-	{	System.setProperty("webdriver.chrome.driver", "C:\\Users\\arshath.3300\\git\\repository2\\Arshath_\\driver\\chromedriver.exe");
+	{	
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\arshath.3300\\git\\repository2\\Arshath_\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://omayo.blogspot.com/");
@@ -16,7 +17,7 @@ public class WH {
 		
 		driver.findElement(By.linkText("Open a popup window")).click();
 		
-	    /*Set<String> windowids = driver.getWindowHandles();
+	   Set<String> windowids = driver.getWindowHandles();
 	    
 	    Iterator<String> itr = windowids.iterator() ;
 	    while(itr.hasNext()) {
@@ -24,7 +25,7 @@ public class WH {
 	    	String windowid = itr.next();
 	    	System.out.println(windowid);
 	    	
-	    }*/
+	    }
 	    
 		Thread.sleep(2000);
 		
