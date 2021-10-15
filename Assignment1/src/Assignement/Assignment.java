@@ -1,4 +1,4 @@
-package Assignement03;
+package Assignement;
 
 public class Assignment {
 
@@ -15,7 +15,7 @@ public class Assignment {
 	}
 
 	public void printValue(int binary_value, int hex_value, int oct_value) {
-		System.out.printf("Binary vlaue is:%d", binary_value);
+		System.out.printf("Binary vlaue is:%od", binary_value);
 		System.out.println();
 		System.out.printf("hex_value is:0x%x" , hex_value);
 		System.out.println();
