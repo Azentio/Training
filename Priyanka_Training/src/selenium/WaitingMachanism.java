@@ -23,9 +23,9 @@ public class WaitingMachanism {
 		driver.findElement(By.className("dropbtn")).click();
 		
 		WebDriverWait wait = new WebDriverWait(driver, 30);
-		 WebElement facebookElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook")));
+	    WebElement facebookElement = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("Facebook")));
 		 facebookElement.click();
-		 driver.quit();
+		// driver.quit();
 	}
 
 }

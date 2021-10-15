@@ -1,5 +1,7 @@
 package selenium;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,6 +15,7 @@ public class HandlingAlerts {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://omayo.blogspot.com/");
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
 		driver.findElement(By.id("alert1")).click();
 		
@@ -20,9 +23,12 @@ public class HandlingAlerts {
 		
 		String textdisplayOnAlert = alert.getText();
 		System.out.println(textdisplayOnAlert);
+	    
+	    alert.accept();
+	   
 		
-		
-		driver.quit();
+		//driver.switchTo().defaultContent();
+		//driver.quit();
 		
 		
 

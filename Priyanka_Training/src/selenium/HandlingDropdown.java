@@ -25,7 +25,7 @@ public class HandlingDropdown {
 		//Select class is the predefined class in Selenium WebDriver 
 		Select select = new Select(dropdownfield);
 		//select c predefined methods for performing various operations on Drop-down and Multi-selection box fields
-		select.selectByVisibleText("doc 3");
+		select.selectByVisibleText("doc 1");
 		
 
 	}

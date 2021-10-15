@@ -17,14 +17,13 @@ public class HandlingMultiselectionBox {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://omayo.blogspot.com/");
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
-		Thread.sleep(3000);
-		
+	
+
 		WebElement multiSelectionField = driver.findElement(By.id("multiselect1"));
 		Select select = new Select(multiSelectionField);
-		select.selectByVisibleText("Volve");
+		select.selectByVisibleText("Volvo");
 		select.selectByVisibleText("Audi");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		select.deselectByVisibleText("Audi");
 
 	}
