@@ -84,7 +84,8 @@ public class Blogspot {
 			 String wid=itr.next();
 			 drive.switchTo().window(wid);
 		 drive.findElement(By.linkText("Open New Page")).click();
-		 
+		 drive.close();
+		 drive.quit();
 	 }
 	 
 }
