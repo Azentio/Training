@@ -13,7 +13,7 @@ public class Assign
 		
 		 {
 
-		System.setProperty("webdriver.chrome.driver","C:\\\\Users\\\\aanchal.bizoara\\\\git\\\\repository2\\\\AanchalBizoara_Training\\\\Driver\\\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\aanchal.bizoara\\git\\repository2\\AanchalBizoara_Training\\Driver\\chromedriver.exe");
 		WebDriver driver= new ChromeDriver();	
 		driver.get("https://omayo.blogspot.com/");	
 		driver.manage().window().maximize();
@@ -38,7 +38,7 @@ public class Assign
 		boolean selected = driver.findElement(By.id("checkbox1")).isSelected();
 		System.out.println("Checkbox selected: "+selected);
 			
-		driver.navigate().to("http://www.google.com");
+		driver.navigate().to("https://www.google.com");
 		driver.navigate().back();
 		driver.navigate().forward();
 		driver.navigate().refresh();
