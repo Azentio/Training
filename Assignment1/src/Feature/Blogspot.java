@@ -30,58 +30,66 @@ public class Blogspot {
 	}
 	
 	@And("^enter username and Hidden data in text box$")
-	public void enter_username_and_Hidden_data_in_text_box()
+	public void enter_username_and_Hidden_data_in_text_box() throws InterruptedException
 	{
 		wait=new WebDriverWait(drive,30);
 		drive.findElement(By.id("text1")).sendKeys("Anandh");
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("text3")));
 		drive.findElement(By.id("text3")).sendKeys("Anandh");
+		Thread.sleep(3000);
 		
 		
 	}
 	
 	
 	 @And("^check i have boat check box$")
-	    public void check_i_have_boat_check_box() {
+	    public void check_i_have_boat_check_box() throws InterruptedException {
 	    drive.findElement(By.id("check3")).click();
+	    Thread.sleep(3000);
 	    }
 	
 	 
 	 @And("^select female radio button$")
-	 public void select_female_radio_button()
+	 public void select_female_radio_button() throws InterruptedException
 
 	 {
 		 drive.findElement(By.id("radio2")).click();
+		 Thread.sleep(3000);
 	 }
 	 
 	 @And("^Choose Audi from dropdown$")
-	 public void Choose_Audi_from_dropdown()
+	 public void Choose_Audi_from_dropdown() throws InterruptedException
 	 {
 		 WebElement car=drive.findElement(By.id("Carlist"));
 		 Select dropdown=new Select(car);
+		 Thread.sleep(3000);
 		 dropdown.selectByVisibleText("Audi");
+		 Thread.sleep(3000);
 	 }
 	 
 	 @And("^click show me alert button$")
-	 public void click_show_me_alert_button()
+	 public void click_show_me_alert_button() throws InterruptedException
 	 {
 		 drive.findElement(By.xpath("//input[@value='Show Me Alert']")).click();
+		 Thread.sleep(3000);
 	 }
 	 
 	 @When("^I click show me alert button and the alert tab is open$")
-	 public void I_click_show_me_alert_button_and_the_alert_tab_is_open()
+	 public void I_click_show_me_alert_button_and_the_alert_tab_is_open() throws InterruptedException
 	 {
 		 Alert alrt= drive.switchTo().alert();
 		 alrt.accept();
+		 Thread.sleep(3000);
 		 
 	 }
 	 @And("^click open new page and handle the window$")
-	 public void click_open_new_page_and_handle_the_window()
+	 public void click_open_new_page_and_handle_the_window() throws InterruptedException
 	 {
 		 Set<String> win=drive.getWindowHandles();
 		 Iterator<String> itr=win.iterator();
 		 
 			 String wid=itr.next();
+			 Thread.sleep(3000);
 			 drive.switchTo().window(wid);
 		 drive.findElement(By.linkText("Open New Page")).click();
 		 drive.close();
